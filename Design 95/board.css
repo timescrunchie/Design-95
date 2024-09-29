@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	font-family: 'Blackadder ITC', serif;
+}
+body{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction:column;
+  min-height: 100vh;
+  background-image: url('./booba.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  }
+.container{
+  display: flex;
+  width: 100%;
+  gap: 200px;
+  padding: 50px;
+  max-width: 1350px;
+}
+section{
+  background:#E6E6FA;
+  border-radius: 7px;
+}
+.tools-board{
+  width: 210px;
+  padding: 15px 22px 0;
+}
+.tools-board .row{
+  margin-bottom: 20px;
+}
+.row .options{
+  list-style: none;
+  margin: 15px 20 10 5px;
+}
+.row .options .option{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.option:hover img {
+  filter: invert(17%) sepia(90%) saturate(3000%) hue-rotate(900deg) brightness(100%) contrast(100%);
+}
+.option :where(span, label){
+  color:#000000;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.option #fill-color{
+  cursor: pointer;
+  height: 1400px
+  width: 14px;
+}
+.option:hover span, .option:hover label, .option.active span, .option.active label {
+  color: #4A98F7;
+}
+#fill-color:checked ~ label{
+  color: #4A98F7;
+}
+.option #size-slider{
+  width: 100%;
+  height: 5px;
+  margin-top: 10px;
+}
+.colors .option:nth-child(1){
+  background: #800080;
+}
+.colors .option:nth-child(2){
+  background:#301934;
+}
+.colors .option:nth-child(3){
+  background: #CF9FFF;
+}
+.colors .option:nth-child(4){
+  background: #7F00FF	;
+}
+.colors .option:nth-child(5){
+  background: #702963;
+}
+.colors .option{
+  height: 20px;
+  width: 20px;
+  background: #000000;
+  border-radius:50%;
+  margin-top: 3px;
+}
+.buttons button{
+  width: 100%;
+  color: #fff;
+  border:none;
+  outline: none;
+  padding: 11px 0;
+  margin-bottom: 13px;
+  font-size: 1em;
+  background: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buttons .clear-canvas{
+color: #5D3FD3;
+border: 1px solid #5D3FD3;
+transition: all 0.3s ease;
+}
+.buttons .save-img{
+  background: #4A98F7;
+  border: 1px solid #4A98F7;
+}
+.buttons .clear-canvas:hover{
+  color: #fff;
+  background: #5D3FD3;
+}
+.drawing-board{
+  flex: 1;
+  height: 80vh;
+}
+.drawing-board canvas{
+  width: 100%;
+  height: 100%;
+}

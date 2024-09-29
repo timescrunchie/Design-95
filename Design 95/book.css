@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1 {
+  font-size: 58px;
+  text-align: left;
+  }
+body {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url('./windows.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.flipbook {
+    width: 1000px;
+    height: 650px;
+}
+
+.flipbook .hard {
+    background:#7CFC00 !important;
+    color: #0047AB;
+    font-weight: bold;
+    border: none;
+    font-size: 30px;
+}
+
+.flipbook .hard small{
+	font-style: italic;
+	font-weight: lighter;
+	opacity: 0.9;
+	font-size: 18px;
+  align-content: center;
+}
+
+.flipbook .page {
+  background: #0096FF	;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    gap: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.11);
+}
+
+.page img{
+	width: 70%;
+	object-fit: cover;
+	margin: auto;
+}
+
+.flipbook .page small{
+	font-size: 30px;
+    margin-bottom: 10px;
+}
